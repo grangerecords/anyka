@@ -1,0 +1,8 @@
+#!/bin/sh
+
+#echo "local service: telnetd start"
+#telnetd
+
+#echo "Samba start"
+#smbd -D
+

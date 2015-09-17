@@ -1,0 +1,1188 @@
+DEV_ROOT = /home/jamey/Lamobo-D1
+/home/jamey/arm-2009q3/bin:/home/jamey/Lamobo-D1/compiler/arm-2009q3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+Updating package list...
+Installing tools...
+Installing 32bit libraries...
+Configuring kernel...
+warning: (DRM && ION) selects DMA_SHARED_BUFFER which has unmet direct dependencies (EXPERIMENTAL)
+warning: (DRM && ION) selects DMA_SHARED_BUFFER which has unmet direct dependencies (EXPERIMENTAL)
+#
+# configuration written to .config
+#
+Building kernel...
+warning: (DRM && ION) selects DMA_SHARED_BUFFER which has unmet direct dependencies (EXPERIMENTAL)
+warning: (DRM && ION) selects DMA_SHARED_BUFFER which has unmet direct dependencies (EXPERIMENTAL)
+WARNING: "g_nand_phy_info" [vmlinux] is COMMON symbol
+WARNING: modpost: Found 1 section mismatch(es).
+To see full details build your kernel with:
+'make CONFIG_DEBUG_SECTION_MISMATCH=y'
+  Kernel: arch/arm/boot/Image is ready
+  Kernel: arch/arm/boot/zImage is ready
+Configuring busybox...
+  GEN     /home/jamey/Lamobo-D1/output/busybox/Makefile
+*
+* Busybox Configuration
+*
+*
+* Busybox Settings
+*
+*
+* General Configuration
+*
+Enable options for full-blown desktop systems (DESKTOP) [Y/n/?] y
+Provide compatible behavior for rare corner cases (bigger code) (EXTRA_COMPAT) [N/y/?] n
+Enable obsolete features removed before SUSv3 (INCLUDE_SUSv2) [N/y/?] n
+Avoid using GCC-specific code constructs (USE_PORTABLE_CODE) [N/y/?] n
+Enable Linux-specific applets and features (PLATFORM_LINUX) [Y/?] y
+Buffer allocation policy
+> 1. Allocate with Malloc (FEATURE_BUFFERS_USE_MALLOC)
+  2. Allocate on the Stack (FEATURE_BUFFERS_GO_ON_STACK)
+  3. Allocate in the .bss section (FEATURE_BUFFERS_GO_IN_BSS)
+choice[1-3?]: 1
+Show applet usage messages (SHOW_USAGE) [Y/n/?] y
+  Show verbose applet usage messages (FEATURE_VERBOSE_USAGE) [N/y/?] n
+  Store applet usage messages in compressed form (FEATURE_COMPRESS_USAGE) [N/y/?] n
+Support --install [-s] to install applet links at runtime (FEATURE_INSTALLER) [Y/n/?] y
+Don't use /usr (INSTALL_NO_USR) [N/y/?] n
+Enable locale support (system needs locale for this to work) (LOCALE_SUPPORT) [N/y/?] n
+Support Unicode (UNICODE_SUPPORT) [N/y/?] n
+Support for --long-options (LONG_OPTS) [Y/n/?] y
+Use the devpts filesystem for Unix98 PTYs (FEATURE_DEVPTS) [Y/n/?] y
+Clean up all memory before exiting (usually not needed) (FEATURE_CLEAN_UP) [N/y/?] n
+Support utmp file (FEATURE_UTMP) [N/y/?] n
+Support writing pidfiles (FEATURE_PIDFILE) [N/y/?] n
+Support for SUID/SGID handling (FEATURE_SUID) [N/y/?] n
+Support NSA Security Enhanced Linux (SELINUX) [N/y/?] n
+exec prefers applets (FEATURE_PREFER_APPLETS) [N/y/?] n
+Path to BusyBox executable (BUSYBOX_EXEC_PATH) [/proc/self/exe] /proc/self/exe
+*
+* Build Options
+*
+Build BusyBox as a static binary (no shared libs) (STATIC) [N/y/?] n
+  Build BusyBox as a position independent executable (PIE) [N/y/?] n
+Force NOMMU build (NOMMU) [N/y/?] n
+Build shared libbusybox (BUILD_LIBBUSYBOX) [Y/n/?] y
+  Produce a binary for each applet, linked against libbusybox (FEATURE_INDIVIDUAL) [Y/n/?] y
+  Produce additional busybox binary linked against libbusybox (FEATURE_SHARED_BUSYBOX) [Y/n/?] y
+Build with Large File Support (for accessing files > 2 GB) (LFS) [Y/n/?] y
+Cross Compiler prefix (CROSS_COMPILER_PREFIX) [arm-none-linux-gnueabi-] arm-none-linux-gnueabi-
+Path to sysroot (SYSROOT) [] 
+Additional CFLAGS (EXTRA_CFLAGS) [] 
+Additional LDFLAGS (EXTRA_LDFLAGS) [] 
+Additional LDLIBS (EXTRA_LDLIBS) [] 
+*
+* Debugging Options
+*
+Build BusyBox with extra Debugging symbols (DEBUG) [N/y/?] n
+Abort compilation on any warning (WERROR) [N/y/?] n
+Additional debugging library
+> 1. None (NO_DEBUG_LIB)
+  2. Dmalloc (DMALLOC)
+  3. Electric-fence (EFENCE)
+choice[1-3?]: 1
+*
+* Installation Options ("make install" behavior)
+*
+What kind of applet links to install
+> 1. as soft-links (INSTALL_APPLET_SYMLINKS)
+  2. as hard-links (INSTALL_APPLET_HARDLINKS)
+  3. as script wrappers (INSTALL_APPLET_SCRIPT_WRAPPERS)
+  4. not installed (INSTALL_APPLET_DONT)
+choice[1-4?]: 1
+BusyBox installation prefix (PREFIX) [./_install] ./_install
+*
+* Busybox Library Tuning
+*
+Enable systemd support (FEATURE_SYSTEMD) [Y/n/?] y
+Support RTMIN[+n] and RTMAX[-n] signal names (FEATURE_RTMINMAX) [Y/n/?] y
+Minimum password length (PASSWORD_MINLEN) [6] 6
+MD5: Trade bytes for speed (0:fast, 3:slow) (MD5_SMALL) [1] 1
+Faster /proc scanning code (+100 bytes) (FEATURE_FAST_TOP) [Y/n/?] y
+Support for /etc/networks (FEATURE_ETC_NETWORKS) [N/y/?] n
+Use termios to manipulate the screen (FEATURE_USE_TERMIOS) [Y/n/?] y
+Command line editing (FEATURE_EDITING) [Y/n/?] y
+  Maximum length of input (FEATURE_EDITING_MAX_LEN) [1024] 1024
+  vi-style line editing commands (FEATURE_EDITING_VI) [N/y/?] n
+  History size (FEATURE_EDITING_HISTORY) [10] 10
+  History saving (FEATURE_EDITING_SAVEHISTORY) [Y/n/?] y
+    Save history on shell exit, not after every command (FEATURE_EDITING_SAVE_ON_EXIT) [N/y/?] n
+    Reverse history search (FEATURE_REVERSE_SEARCH) [Y/n/?] y
+  Tab completion (FEATURE_TAB_COMPLETION) [Y/n/?] y
+    Username completion (FEATURE_USERNAME_COMPLETION) [Y/n/?] y
+  Fancy shell prompts (FEATURE_EDITING_FANCY_PROMPT) [Y/n/?] y
+  Query cursor position from terminal (FEATURE_EDITING_ASK_TERMINAL) [N/y/?] n
+Non-POSIX, but safer, copying to special nodes (FEATURE_NON_POSIX_CP) [Y/n/?] y
+Give more precise messages when copy fails (cp, mv etc) (FEATURE_VERBOSE_CP_MESSAGE) [N/y/?] n
+Copy buffer size, in kilobytes (FEATURE_COPYBUF_KB) [4] 4
+Skip rootfs in mount table (FEATURE_SKIP_ROOTFS) [Y/n/?] y
+Use clock_gettime(CLOCK_MONOTONIC) syscall (MONOTONIC_SYSCALL) [N/y/?] n
+Use ioctl names rather than hex values in error messages (IOCTL_HEX2STR_ERROR) [Y/n/?] y
+Support infiniband HW (FEATURE_HWIB) [Y/n/?] y
+*
+* Applets
+*
+*
+* Archival Utilities
+*
+Make tar, rpm, modprobe etc understand .xz data (FEATURE_SEAMLESS_XZ) [N/y/?] n
+Make tar, rpm, modprobe etc understand .lzma data (FEATURE_SEAMLESS_LZMA) [N/y/?] n
+Make tar, rpm, modprobe etc understand .bz2 data (FEATURE_SEAMLESS_BZ2) [N/y/?] n
+Make tar, rpm, modprobe etc understand .gz data (FEATURE_SEAMLESS_GZ) [N/y/?] n
+tar, rpm, modprobe etc understand .Z data (FEATURE_SEAMLESS_Z) [N/y/?] n
+ar (AR) [N/y/?] n
+bunzip2 (BUNZIP2) [N/y/?] n
+bzip2 (BZIP2) [N/y/?] n
+cpio (CPIO) [N/y/?] n
+dpkg (DPKG) [N/y/?] n
+dpkg_deb (DPKG_DEB) [N/y/?] n
+gunzip (GUNZIP) [N/y/?] n
+gzip (GZIP) [N/y/?] n
+lzop (LZOP) [N/y/?] n
+rpm2cpio (RPM2CPIO) [N/y/?] n
+rpm (RPM) [N/y/?] n
+tar (TAR) [N/y/?] n
+uncompress (UNCOMPRESS) [N/y/?] n
+unlzma (UNLZMA) [N/y/?] n
+unxz (UNXZ) [N/y/?] n
+unzip (UNZIP) [N/y/?] n
+*
+* Coreutils
+*
+basename (BASENAME) [Y/n/?] y
+cat (CAT) [Y/n/?] y
+date (DATE) [Y/n/?] y
+  Enable ISO date format output (-I) (FEATURE_DATE_ISOFMT) [Y/n/?] y
+  Support %[num]N nanosecond format specifier (FEATURE_DATE_NANO) [N/y/?] n
+  Support weird 'date MMDDhhmm[[YY]YY][.ss]' format (FEATURE_DATE_COMPAT) [Y/n/?] y
+hostid (HOSTID) [Y/n/?] y
+id (ID) [Y/n/?] y
+groups (GROUPS) [Y/n/?] y
+test (TEST) [Y/n/?] y
+  Extend test to 64 bit (FEATURE_TEST_64) [Y/n/?] y
+touch (TOUCH) [Y/n/?] y
+  Add support for SUSV3 features (-d -t -r) (FEATURE_TOUCH_SUSV3) [Y/n/?] y
+tr (TR) [N/y/?] n
+base64 (BASE64) [Y/n/?] y
+cal (CAL) [Y/n/?] y
+catv (CATV) [Y/n/?] y
+chgrp (CHGRP) [N/y/?] n
+chmod (CHMOD) [Y/n/?] y
+chown (CHOWN) [Y/n/?] y
+  Enable long options (FEATURE_CHOWN_LONG_OPTIONS) [Y/n/?] y
+chroot (CHROOT) [Y/n/?] y
+cksum (CKSUM) [Y/n/?] y
+comm (COMM) [N/y/?] n
+cp (CP) [Y/n/?] y
+  Enable long options for cp (FEATURE_CP_LONG_OPTIONS) [Y/n/?] y
+cut (CUT) [Y/n/?] y
+dd (DD) [Y/n/?] y
+  Enable DD signal handling for status reporting (FEATURE_DD_SIGNAL_HANDLING) [Y/n/?] y
+    Enable the third status line upon signal (FEATURE_DD_THIRD_STATUS_LINE) [Y/n/?] y
+  Enable ibs, obs and conv options (FEATURE_DD_IBS_OBS) [Y/n/?] y
+df (DF) [Y/n/?] y
+  Enable -a, -i, -B (FEATURE_DF_FANCY) [Y/n/?] y
+dirname (DIRNAME) [Y/n/?] y
+dos2unix/unix2dos (DOS2UNIX) [Y/n/?] y
+du (default blocksize of 512 bytes) (DU) [Y/n/?] y
+  Use a default blocksize of 1024 bytes (1K) (FEATURE_DU_DEFAULT_BLOCKSIZE_1K) [Y/n/?] y
+echo (basic SuSv3 version taking no options) (ECHO) [Y/n/?] y
+  Enable echo options (-n and -e) (FEATURE_FANCY_ECHO) [Y/n/?] y
+env (ENV) [Y/n/?] y
+  Enable long options (FEATURE_ENV_LONG_OPTIONS) [Y/n/?] y
+expand (EXPAND) [Y/n/?] y
+  Enable long options (FEATURE_EXPAND_LONG_OPTIONS) [Y/n/?] y
+expr (EXPR) [Y/n/?] y
+  Extend Posix numbers support to 64 bit (EXPR_MATH_SUPPORT_64) [Y/n/?] y
+false (FALSE) [Y/n/?] y
+fold (FOLD) [Y/n/?] y
+fsync (FSYNC) [Y/n/?] y
+head (HEAD) [Y/n/?] y
+  Enable head options (-c, -q, and -v) (FEATURE_FANCY_HEAD) [Y/n/?] y
+install (INSTALL) [Y/n/?] y
+  Enable long options (FEATURE_INSTALL_LONG_OPTIONS) [Y/n/?] y
+ln (LN) [Y/n/?] y
+logname (LOGNAME) [Y/n/?] y
+ls (LS) [Y/n/?] y
+  Enable filetyping options (-p and -F) (FEATURE_LS_FILETYPES) [Y/n/?] y
+  Enable symlinks dereferencing (-L) (FEATURE_LS_FOLLOWLINKS) [Y/n/?] y
+  Enable recursion (-R) (FEATURE_LS_RECURSIVE) [Y/n/?] y
+  Sort the file names (FEATURE_LS_SORTFILES) [Y/n/?] y
+  Show file timestamps (FEATURE_LS_TIMESTAMPS) [Y/n/?] y
+  Show username/groupnames (FEATURE_LS_USERNAME) [Y/n/?] y
+  Allow use of color to identify file types (FEATURE_LS_COLOR) [Y/n/?] y
+    Produce colored ls output by default (FEATURE_LS_COLOR_IS_DEFAULT) [Y/n/?] y
+md5sum (MD5SUM) [Y/n/?] y
+mkdir (MKDIR) [Y/n/?] y
+  Enable long options (FEATURE_MKDIR_LONG_OPTIONS) [Y/n/?] y
+mkfifo (MKFIFO) [Y/n/?] y
+mknod (MKNOD) [Y/n/?] y
+mv (MV) [Y/n/?] y
+  Enable long options (FEATURE_MV_LONG_OPTIONS) [Y/n/?] y
+nice (NICE) [Y/n/?] y
+nohup (NOHUP) [N/y/?] n
+od (OD) [Y/n/?] y
+printenv (PRINTENV) [Y/n/?] y
+printf (PRINTF) [Y/n/?] y
+pwd (PWD) [Y/n/?] y
+readlink (READLINK) [Y/n/?] y
+  Enable canonicalization by following all symlinks (-f) (FEATURE_READLINK_FOLLOW) [Y/n/?] y
+realpath (REALPATH) [Y/n/?] y
+rm (RM) [Y/n/?] y
+rmdir (RMDIR) [Y/n/?] y
+  Enable long options (FEATURE_RMDIR_LONG_OPTIONS) [Y/n/?] y
+seq (SEQ) [N/y/?] n
+sha1sum (SHA1SUM) [Y/n/?] y
+sha256sum (SHA256SUM) [Y/n/?] y
+sha512sum (SHA512SUM) [Y/n/?] y
+sleep (SLEEP) [Y/n/?] y
+  Enable multiple arguments and s/m/h/d suffixes (FEATURE_FANCY_SLEEP) [Y/n/?] y
+    Enable fractional arguments (FEATURE_FLOAT_SLEEP) [Y/n/?] y
+sort (SORT) [Y/n/?] y
+  Full SuSv3 compliant sort (support -ktcsbdfiozgM) (FEATURE_SORT_BIG) [Y/n/?] y
+split (SPLIT) [Y/n/?] y
+  Fancy extensions (FEATURE_SPLIT_FANCY) [Y/n/?] y
+stat (STAT) [Y/n/?] y
+  Enable custom formats (-c) (FEATURE_STAT_FORMAT) [Y/n/?] y
+stty (STTY) [Y/n/?] y
+sum (SUM) [Y/n/?] y
+sync (SYNC) [Y/n/?] y
+tac (TAC) [N/y/?] n
+tail (TAIL) [Y/n/?] y
+  Enable extra tail options (-q, -s, -v, and -F) (FEATURE_FANCY_TAIL) [Y/n/?] y
+tee (TEE) [Y/n/?] y
+  Enable block I/O (larger/faster) instead of byte I/O (FEATURE_TEE_USE_BLOCK_IO) [Y/n/?] y
+true (TRUE) [Y/n/?] y
+tty (TTY) [Y/n/?] y
+uname (UNAME) [Y/n/?] y
+unexpand (UNEXPAND) [N/y/?] n
+uniq (UNIQ) [N/y/?] n
+usleep (USLEEP) [Y/n/?] y
+uudecode (UUDECODE) [Y/n/?] y
+uuencode (UUENCODE) [Y/n/?] y
+wc (WC) [Y/n/?] y
+  Support very large files in wc (FEATURE_WC_LARGE) [Y/n/?] y
+whoami (WHOAMI) [Y/n/?] y
+yes (YES) [Y/n/?] y
+*
+* Common options for cp and mv
+*
+Preserve hard links (FEATURE_PRESERVE_HARDLINKS) [Y/n/?] y
+*
+* Common options for ls, more and telnet
+*
+Calculate terminal & column widths (FEATURE_AUTOWIDTH) [Y/n/?] y
+*
+* Common options for df, du, ls
+*
+Support for human readable output (example 13k, 23M, 235G) (FEATURE_HUMAN_READABLE) [Y/n/?] y
+*
+* Common options for md5sum, sha1sum, sha256sum, sha512sum
+*
+Enable -c, -s and -w options (FEATURE_MD5_SHA1_SUM_CHECK) [Y/n/?] y
+*
+* Console Utilities
+*
+chvt (CHVT) [Y/n/?] y
+fgconsole (FGCONSOLE) [Y/n/?] y
+clear (CLEAR) [Y/n/?] y
+deallocvt (DEALLOCVT) [N/y/?] n
+dumpkmap (DUMPKMAP) [Y/n/?] y
+kbd_mode (KBD_MODE) [Y/n/?] y
+loadfont (LOADFONT) [Y/n/?] y
+loadkmap (LOADKMAP) [Y/n/?] y
+openvt (OPENVT) [N/y/?] n
+reset (RESET) [Y/n/?] y
+resize (RESIZE) [Y/n/?] y
+  Print environment variables (FEATURE_RESIZE_PRINT) [Y/n/?] y
+setconsole (SETCONSOLE) [Y/n/?] y
+  Enable long options (FEATURE_SETCONSOLE_LONG_OPTIONS) [Y/n/?] y
+setfont (SETFONT) [Y/n/?] y
+  Support reading textual screen maps (FEATURE_SETFONT_TEXTUAL_MAP) [Y/n/?] y
+  Default directory for console-tools files (DEFAULT_SETFONT_DIR) [] 
+setkeycodes (SETKEYCODES) [Y/n/?] y
+setlogcons (SETLOGCONS) [Y/n/?] y
+showkey (SHOWKEY) [Y/n/?] y
+*
+* Common options for loadfont and setfont
+*
+Support for PSF2 console fonts (FEATURE_LOADFONT_PSF2) [N/y/?] n
+Support for old (raw) console fonts (FEATURE_LOADFONT_RAW) [N/y/?] n
+*
+* Debian Utilities
+*
+mktemp (MKTEMP) [N/y/?] n
+pipe_progress (PIPE_PROGRESS) [N/y/?] n
+run-parts (RUN_PARTS) [N/y/?] n
+start-stop-daemon (START_STOP_DAEMON) [N/y/?] n
+which (WHICH) [Y/n/?] y
+*
+* Editors
+*
+patch (PATCH) [N/y/?] n
+vi (VI) [Y/n/?] y
+  Maximum screen width in vi (FEATURE_VI_MAX_LEN) [4096] 4096
+  Allow vi to display 8-bit chars (otherwise shows dots) (FEATURE_VI_8BIT) [Y/n/?] y
+  Enable ":" colon commands (no "ex" mode) (FEATURE_VI_COLON) [Y/n/?] y
+  Enable yank/put commands and mark cmds (FEATURE_VI_YANKMARK) [Y/n/?] y
+  Enable search and replace cmds (FEATURE_VI_SEARCH) [Y/n/?] y
+    Enable regex in search and replace (FEATURE_VI_REGEX_SEARCH) [N/y/?] n
+  Catch signals (FEATURE_VI_USE_SIGNALS) [Y/n/?] y
+  Remember previous cmd and "." cmd (FEATURE_VI_DOT_CMD) [Y/n/?] y
+  Enable -R option and "view" mode (FEATURE_VI_READONLY) [Y/n/?] y
+  Enable set-able options, ai ic showmatch (FEATURE_VI_SETOPTS) [Y/n/?] y
+  Support for :set (FEATURE_VI_SET) [Y/n/?] y
+  Handle window resize (FEATURE_VI_WIN_RESIZE) [Y/n/?] y
+  Use 'tell me cursor position' ESC sequence to measure window (FEATURE_VI_ASK_TERMINAL) [Y/n/?] y
+  Optimize cursor movement (FEATURE_VI_OPTIMIZE_CURSOR) [Y/n/?] y
+awk (AWK) [Y/n/?] y
+  Enable math functions (requires libm) (FEATURE_AWK_LIBM) [Y/n/?] y
+cmp (CMP) [Y/n/?] y
+diff (DIFF) [Y/n/?] y
+  Enable long options (FEATURE_DIFF_LONG_OPTIONS) [Y/n/?] y
+  Enable directory support (FEATURE_DIFF_DIR) [Y/n/?] y
+ed (ED) [N/y/?] n
+sed (SED) [Y/n/?] y
+Allow vi and awk to execute shell commands (FEATURE_ALLOW_EXEC) [Y/n/?] y
+*
+* Finding Utilities
+*
+find (FIND) [Y/n/?] y
+  Enable -print0: NUL-terminated output (FEATURE_FIND_PRINT0) [Y/n/?] y
+  Enable -mtime: modified time matching (FEATURE_FIND_MTIME) [Y/n/?] y
+  Enable -mmin: modified time matching by minutes (FEATURE_FIND_MMIN) [Y/n/?] y
+  Enable -perm: permissions matching (FEATURE_FIND_PERM) [Y/n/?] y
+  Enable -type: file type matching (file/dir/link/...) (FEATURE_FIND_TYPE) [Y/n/?] y
+  Enable -xdev: 'stay in filesystem' (FEATURE_FIND_XDEV) [Y/n/?] y
+  Enable -mindepth N and -maxdepth N (FEATURE_FIND_MAXDEPTH) [Y/n/?] y
+  Enable -newer: compare file modification times (FEATURE_FIND_NEWER) [Y/n/?] y
+  Enable -inum: inode number matching (FEATURE_FIND_INUM) [Y/n/?] y
+  Enable -exec: execute commands (FEATURE_FIND_EXEC) [Y/n/?] y
+  Enable -user: username/uid matching (FEATURE_FIND_USER) [Y/n/?] y
+  Enable -group: group/gid matching (FEATURE_FIND_GROUP) [Y/n/?] y
+  Enable the 'not' (!) operator (FEATURE_FIND_NOT) [Y/n/?] y
+  Enable -depth (FEATURE_FIND_DEPTH) [Y/n/?] y
+  Enable parens in options (FEATURE_FIND_PAREN) [Y/n/?] y
+  Enable -size: file size matching (FEATURE_FIND_SIZE) [Y/n/?] y
+  Enable -prune: exclude subdirectories (FEATURE_FIND_PRUNE) [Y/n/?] y
+  Enable -delete: delete files/dirs (FEATURE_FIND_DELETE) [Y/n/?] y
+  Enable -path: match pathname with shell pattern (FEATURE_FIND_PATH) [Y/n/?] y
+  Enable -regex: match pathname with regex (FEATURE_FIND_REGEX) [Y/n/?] y
+  Enable -links: link count matching (FEATURE_FIND_LINKS) [Y/n/?] y
+grep (GREP) [Y/n/?] y
+  Enable extended regular expressions (egrep & grep -E) (FEATURE_GREP_EGREP_ALIAS) [Y/n/?] y
+  Alias fgrep to grep -F (FEATURE_GREP_FGREP_ALIAS) [Y/n/?] y
+  Enable before and after context flags (-A, -B and -C) (FEATURE_GREP_CONTEXT) [Y/n/?] y
+xargs (XARGS) [Y/n/?] y
+  Enable -p: prompt and confirmation (FEATURE_XARGS_SUPPORT_CONFIRMATION) [Y/n/?] y
+  Enable single and double quotes and backslash (FEATURE_XARGS_SUPPORT_QUOTES) [Y/n/?] y
+  Enable -x: exit if -s or -n is exceeded (FEATURE_XARGS_SUPPORT_TERMOPT) [Y/n/?] y
+  Enable -0: NUL-terminated input (FEATURE_XARGS_SUPPORT_ZERO_TERM) [Y/n/?] y
+*
+* Init Utilities
+*
+bootchartd (BOOTCHARTD) [Y/n/?] y
+  Compatible, bloated header (FEATURE_BOOTCHARTD_BLOATED_HEADER) [Y/n/?] y
+  Support bootchartd.conf (FEATURE_BOOTCHARTD_CONFIG_FILE) [Y/n/?] y
+poweroff, halt, and reboot (HALT) [Y/n/?] y
+init (INIT) [Y/n/?] y
+  Support reading an inittab file (FEATURE_USE_INITTAB) [Y/n/?] y
+    Support killing processes that have been removed from inittab (FEATURE_KILL_REMOVED) [N/y/?] n
+  Run commands with leading dash with controlling tty (FEATURE_INIT_SCTTY) [Y/n/?] y
+  Enable init to write to syslog (FEATURE_INIT_SYSLOG) [Y/n] y
+  Be _extra_ quiet on boot (FEATURE_EXTRA_QUIET) [Y/n/?] y
+  Support dumping core for child processes (debugging only) (FEATURE_INIT_COREDUMPS) [Y/n/?] y
+  Support running init from within an initrd (not initramfs) (FEATURE_INITRD) [Y/n/?] y
+  Initial terminal type (INIT_TERMINAL_TYPE) [linux] linux
+mesg (MESG) [Y/n/?] y
+  Enable writing to tty only by group, not by everybody (FEATURE_MESG_ENABLE_ONLY_GROUP) [Y/n/?] y
+*
+* Login/Password Management Utilities
+*
+add-shell (ADD_SHELL) [N/y/?] n
+remove-shell (REMOVE_SHELL) [N/y/?] n
+Support for shadow passwords (FEATURE_SHADOWPASSWDS) [N/y/?] n
+Use internal password and group functions rather than system functions (USE_BB_PWD_GRP) [N/y/?] n
+Use internal crypt functions (USE_BB_CRYPT) [N/y/?] n
+adduser (ADDUSER) [N/y/?] n
+addgroup (ADDGROUP) [N/y/?] n
+deluser (DELUSER) [N/y/?] n
+delgroup (DELGROUP) [N/y/?] n
+getty (GETTY) [Y/n/?] y
+login (LOGIN) [Y/n/?] y
+  Run logged in session in a child process (LOGIN_SESSION_AS_CHILD) [Y/n/?] y
+  Support for PAM (Pluggable Authentication Modules) (PAM) [N/y/?] n
+  Support for login scripts (LOGIN_SCRIPTS) [Y/n/?] y
+  Support for /etc/nologin (FEATURE_NOLOGIN) [Y/n/?] y
+  Support for /etc/securetty (FEATURE_SECURETTY) [N/y/?] n
+passwd (PASSWD) [Y/n/?] y
+  Check new passwords for weakness (FEATURE_PASSWD_WEAK_CHECK) [N/y/?] n
+cryptpw (CRYPTPW) [N/y/?] n
+chpasswd (CHPASSWD) [N/y/?] n
+Default password encryption method (passwd -a, cryptpw -m parameter) (FEATURE_DEFAULT_PASSWD_ALGO) [des] des
+su (SU) [N/y/?] n
+sulogin (SULOGIN) [N/y/?] n
+vlock (VLOCK) [N/y/?] n
+*
+* Linux Ext2 FS Progs
+*
+chattr (CHATTR) [N/y/?] n
+fsck (FSCK) [N/y/?] n
+lsattr (LSATTR) [N/y/?] n
+tune2fs (TUNE2FS) [N/y/?] n
+*
+* Linux Module Utilities
+*
+modinfo (MODINFO) [Y/n/?] y
+Simplified modutils (MODPROBE_SMALL) [Y/n/?] y
+  Accept module options on modprobe command line (FEATURE_MODPROBE_SMALL_OPTIONS_ON_CMDLINE) [Y/n/?] y
+  Skip loading of already loaded modules (FEATURE_MODPROBE_SMALL_CHECK_ALREADY_LOADED) [Y/n/?] y
+*
+* Options common to multiple modutils
+*
+Try to load module from a mmap'ed area (FEATURE_INSMOD_TRY_MMAP) [N/y/?] n
+Default directory containing modules (DEFAULT_MODULES_DIR) [/lib/modules] /lib/modules
+Default name of modules.dep (DEFAULT_DEPMOD_FILE) [modules.dep] modules.dep
+*
+* Linux System Utilities
+*
+blockdev (BLOCKDEV) [Y/n/?] y
+mdev (MDEV) [Y/n/?] y
+  Support /etc/mdev.conf (FEATURE_MDEV_CONF) [Y/n/?] y
+    Support subdirs/symlinks (FEATURE_MDEV_RENAME) [Y/n/?] y
+      Support regular expressions substitutions when renaming device (FEATURE_MDEV_RENAME_REGEXP) [Y/n/?] y
+    Support command execution at device addition/removal (FEATURE_MDEV_EXEC) [Y/n/?] y
+  Support loading of firmwares (FEATURE_MDEV_LOAD_FIRMWARE) [Y/n/?] y
+rev (REV) [N/y/?] n
+acpid (ACPID) [Y/n/?] y
+  Accept and ignore redundant options (FEATURE_ACPID_COMPAT) [Y/n/?] y
+blkid (BLKID) [N/y/?] n
+dmesg (DMESG) [Y/n/?] y
+  Pretty dmesg output (FEATURE_DMESG_PRETTY) [Y/n/?] y
+fbset (FBSET) [Y/n/?] y
+  Turn on extra fbset options (FEATURE_FBSET_FANCY) [Y/n/?] y
+  Turn on fbset readmode support (FEATURE_FBSET_READMODE) [Y/n/?] y
+fdflush (FDFLUSH) [N/y/?] n
+fdformat (FDFORMAT) [N/y/?] n
+fdisk (FDISK) [N/y/?] n
+findfs (FINDFS) [N/y/?] n
+flock (FLOCK) [N/y/?] n
+freeramdisk (FREERAMDISK) [N/y/?] n
+fsck_minix (FSCK_MINIX) [N/y/?] n
+mkfs_ext2 (MKFS_EXT2) [N/y/?] n
+mkfs_minix (MKFS_MINIX) [N/y/?] n
+mkfs_reiser (MKFS_REISER) [N/y/?] n
+mkfs_vfat (MKFS_VFAT) [Y/n/?] y
+getopt (GETOPT) [Y/n/?] y
+  Support option -l (FEATURE_GETOPT_LONG) [Y/n/?] y
+hexdump (HEXDUMP) [Y/n/?] y
+  Support -R, reverse of 'hexdump -Cv' (FEATURE_HEXDUMP_REVERSE) [Y/n/?] y
+  hd (HD) [Y/n/?] y
+hwclock (HWCLOCK) [Y/n/?] y
+  Support long options (--hctosys,...) (FEATURE_HWCLOCK_LONG_OPTIONS) [Y/n/?] y
+  Use FHS /var/lib/hwclock/adjtime (FEATURE_HWCLOCK_ADJTIME_FHS) [Y/n/?] y
+ipcrm (IPCRM) [Y/n/?] y
+ipcs (IPCS) [Y/n/?] y
+losetup (LOSETUP) [Y/n/?] y
+lspci (LSPCI) [Y/n/?] y
+lsusb (LSUSB) [Y/n/?] y
+mkswap (MKSWAP) [N/y/?] n
+more (MORE) [Y/n/?] y
+mount (MOUNT) [Y/n/?] y
+  Support option -f (FEATURE_MOUNT_FAKE) [Y/n/?] y
+  Support option -v (FEATURE_MOUNT_VERBOSE) [Y/n/?] y
+  Support mount helpers (FEATURE_MOUNT_HELPERS) [N/y/?] n
+  Support specifying devices by label or UUID (FEATURE_MOUNT_LABEL) [Y/n/?] y
+  Support mounting NFS file systems on Linux < 2.6.23 (FEATURE_MOUNT_NFS) [N/y/?] n
+  Support mounting CIFS/SMB file systems (FEATURE_MOUNT_CIFS) [Y/n/?] y
+  Support lots of -o flags in mount (FEATURE_MOUNT_FLAGS) [Y/n/?] y
+  Support /etc/fstab and -a (FEATURE_MOUNT_FSTAB) [Y/n/?] y
+pivot_root (PIVOT_ROOT) [Y/n/?] y
+rdate (RDATE) [Y/n/?] y
+rdev (RDEV) [Y/n/?] y
+readprofile (READPROFILE) [Y/n/?] y
+rtcwake (RTCWAKE) [Y/n/?] y
+script (SCRIPT) [Y/n/?] y
+scriptreplay (SCRIPTREPLAY) [Y/n/?] y
+setarch (SETARCH) [Y/n/?] y
+swaponoff (SWAPONOFF) [N/y/?] n
+switch_root (SWITCH_ROOT) [Y/n/?] y
+umount (UMOUNT) [Y/n/?] y
+  Support option -a (FEATURE_UMOUNT_ALL) [Y/n/?] y
+  *
+  * Common options for mount/umount
+  *
+  Support loopback mounts (FEATURE_MOUNT_LOOP) [Y/n/?] y
+    Create new loopback devices if needed (FEATURE_MOUNT_LOOP_CREATE) [Y/n/?] y
+  Support for the old /etc/mtab file (FEATURE_MTAB_SUPPORT) [N/y/?] n
+*
+* Filesystem/Volume identification
+*
+Ext filesystem (FEATURE_VOLUMEID_EXT) [Y/n/?] y
+btrfs filesystem (FEATURE_VOLUMEID_BTRFS) [Y/n/?] y
+Reiser filesystem (FEATURE_VOLUMEID_REISERFS) [Y/n/?] y
+fat filesystem (FEATURE_VOLUMEID_FAT) [Y/n/?] y
+hfs filesystem (FEATURE_VOLUMEID_HFS) [Y/n/?] y
+jfs filesystem (FEATURE_VOLUMEID_JFS) [Y/n/?] y
+xfs filesystem (FEATURE_VOLUMEID_XFS) [Y/n/?] y
+ntfs filesystem (FEATURE_VOLUMEID_NTFS) [Y/n/?] y
+iso9660 filesystem (FEATURE_VOLUMEID_ISO9660) [Y/n/?] y
+udf filesystem (FEATURE_VOLUMEID_UDF) [Y/n/?] y
+luks filesystem (FEATURE_VOLUMEID_LUKS) [Y/n/?] y
+linux swap filesystem (FEATURE_VOLUMEID_LINUXSWAP) [Y/n/?] y
+cramfs filesystem (FEATURE_VOLUMEID_CRAMFS) [Y/n/?] y
+romfs filesystem (FEATURE_VOLUMEID_ROMFS) [Y/n/?] y
+sysv filesystem (FEATURE_VOLUMEID_SYSV) [Y/n/?] y
+ocfs2 filesystem (FEATURE_VOLUMEID_OCFS2) [Y/n/?] y
+linuxraid (FEATURE_VOLUMEID_LINUXRAID) [Y/n/?] y
+*
+* Miscellaneous Utilities
+*
+conspy (CONSPY) [N/y/?] n
+less (LESS) [Y/n/?] y
+  Max number of input lines less will try to eat (FEATURE_LESS_MAXLINES) [9999999] 9999999
+  Enable bracket searching (FEATURE_LESS_BRACKETS) [Y/n/?] y
+  Enable -m/-M (FEATURE_LESS_FLAGS) [Y/n/?] y
+  Enable marks (FEATURE_LESS_MARKS) [Y/n/?] y
+  Enable regular expressions (FEATURE_LESS_REGEXP) [Y/n/?] y
+  Enable automatic resizing on window size changes (FEATURE_LESS_WINCH) [Y/n/?] y
+    Use 'tell me cursor position' ESC sequence to measure window (FEATURE_LESS_ASK_TERMINAL) [Y/n/?] y
+  Enable flag changes ('-' command) (FEATURE_LESS_DASHCMD) [Y/n/?] y
+    Enable dynamic switching of line numbers (FEATURE_LESS_LINENUMS) [Y/n/?] y
+nandwrite (NANDWRITE) [Y/n/?] y
+nanddump (NANDDUMP) [Y/n/?] y
+setserial (SETSERIAL) [Y/n/?] y
+ubiattach (UBIATTACH) [Y/n/?] y
+ubidetach (UBIDETACH) [Y/n/?] y
+ubimkvol (UBIMKVOL) [Y/n/?] y
+ubirmvol (UBIRMVOL) [Y/n/?] y
+ubirsvol (UBIRSVOL) [Y/n/?] y
+ubiupdatevol (UBIUPDATEVOL) [Y/n/?] y
+adjtimex (ADJTIMEX) [Y/n/?] y
+bbconfig (BBCONFIG) [N/y/?] n
+beep (BEEP) [Y/n/?] y
+  default frequency (FEATURE_BEEP_FREQ) [4000] 4000
+  default length (FEATURE_BEEP_LENGTH_MS) [30] 30
+chat (CHAT) [Y/n/?] y
+  Enable NOFAIL expect strings (FEATURE_CHAT_NOFAIL) [Y/n/?] y
+  Force STDIN to be a TTY (FEATURE_CHAT_TTY_HIFI) [N/y/?] n
+  Enable implicit Carriage Return (FEATURE_CHAT_IMPLICIT_CR) [Y/n/?] y
+  Swallow options (FEATURE_CHAT_SWALLOW_OPTS) [Y/n/?] y
+  Support weird SEND escapes (FEATURE_CHAT_SEND_ESCAPES) [Y/n/?] y
+  Support variable-length ABORT conditions (FEATURE_CHAT_VAR_ABORT_LEN) [Y/n/?] y
+  Support revoking of ABORT conditions (FEATURE_CHAT_CLR_ABORT) [Y/n/?] y
+chrt (CHRT) [Y/n/?] y
+crond (CROND) [N/y/?] n
+  crond spool directory (FEATURE_CROND_DIR) [/var/spool/cron] /var/spool/cron
+crontab (CRONTAB) [Y/n/?] y
+dc (DC) [Y/n/?] y
+  Enable power and exp functions (requires libm) (FEATURE_DC_LIBM) [Y/n/?] y
+devfsd (obsolete) (DEVFSD) [N/y/?] n
+Use devfs names for all devices (obsolete) (FEATURE_DEVFS) [N/y/?] n
+devmem (DEVMEM) [Y/n/?] y
+eject (EJECT) [Y/n/?] y
+  SCSI support (FEATURE_EJECT_SCSI) [Y/n/?] y
+fbsplash (FBSPLASH) [Y/n/?] y
+flashcp (FLASHCP) [N/y/?] n
+flash_lock (FLASH_LOCK) [N/y/?] n
+flash_unlock (FLASH_UNLOCK) [N/y/?] n
+flash_eraseall (FLASH_ERASEALL) [N/y/?] n
+ionice (IONICE) [Y/n/?] y
+inotifyd (INOTIFYD) [Y/n/?] y
+hdparm (HDPARM) [N/y/?] n
+makedevs (MAKEDEVS) [Y/n/?] y
+  Choose makedevs behaviour
+    1. leaf (FEATURE_MAKEDEVS_LEAF)
+  > 2. table (FEATURE_MAKEDEVS_TABLE)
+  choice[1-2]: 2
+man (MAN) [N/y/?] n
+microcom (MICROCOM) [N/y/?] n
+mountpoint (MOUNTPOINT) [Y/n/?] y
+mt (MT) [N/y/?] n
+raidautorun (RAIDAUTORUN) [N/y/?] n
+readahead (READAHEAD) [Y/n/?] y
+rfkill (RFKILL) [N/y/?] n
+rx (RX) [Y/n/?] y
+setsid (SETSID) [Y/n/?] y
+strings (STRINGS) [Y/n/?] y
+taskset (TASKSET) [N/y/?] n
+time (TIME) [Y/n/?] y
+timeout (TIMEOUT) [Y/n/?] y
+ttysize (TTYSIZE) [N/y/?] n
+volname (VOLNAME) [Y/n/?] y
+watchdog (WATCHDOG) [Y/n/?] y
+*
+* Networking Utilities
+*
+nameif (NAMEIF) [Y/n/?] y
+  Extended nameif (FEATURE_NAMEIF_EXTENDED) [Y/n/?] y
+nbd-client (NBDCLIENT) [Y/n/?] y
+nc (NC) [Y/n/?] y
+  Netcat server options (-l) (NC_SERVER) [Y/n/?] y
+  Netcat extensions (-eiw and filename) (NC_EXTRA) [Y/n/?] y
+  Netcat 1.10 compatibility (+2.5k) (NC_110_COMPAT) [N/y/?] n
+ping (PING) [Y/n/?] y
+  Enable fancy ping output (FEATURE_FANCY_PING) [Y/n/?] y
+whois (WHOIS) [Y/n/?] y
+Enable IPv6 support (FEATURE_IPV6) [N/y/?] n
+Enable Unix domain socket support (usually not needed) (FEATURE_UNIX_LOCAL) [N/y/?] n
+Verbose resolution errors (VERBOSE_RESOLUTION_ERRORS) [N/y/?] n
+arp (ARP) [Y/n/?] y
+arping (ARPING) [Y/n/?] y
+brctl (BRCTL) [Y/n/?] y
+  Fancy options (FEATURE_BRCTL_FANCY) [Y/n/?] y
+    Support show, showmac and showstp (FEATURE_BRCTL_SHOW) [Y/n/?] y
+dnsd (DNSD) [N/y/?] n
+ether-wake (ETHER_WAKE) [N/y/?] n
+fakeidentd (FAKEIDENTD) [Y/n/?] y
+ftpd (FTPD) [Y/n/?] y
+  Enable upload commands (FEATURE_FTP_WRITE) [Y/n/?] y
+  Enable workaround for RFC-violating clients (FEATURE_FTPD_ACCEPT_BROKEN_LIST) [Y/n/?] y
+ftpget (FTPGET) [Y/n/?] y
+ftpput (FTPPUT) [Y/n/?] y
+  Enable long options in ftpget/ftpput (FEATURE_FTPGETPUT_LONG_OPTIONS) [Y/n/?] y
+hostname (HOSTNAME) [Y/n/?] y
+httpd (HTTPD) [N/y/?] n
+ifconfig (IFCONFIG) [Y/n/?] y
+  Enable status reporting output (+7k) (FEATURE_IFCONFIG_STATUS) [Y/n/?] y
+  Enable slip-specific options "keepalive" and "outfill" (FEATURE_IFCONFIG_SLIP) [Y/n/?] y
+  Enable options "mem_start", "io_addr", and "irq" (FEATURE_IFCONFIG_MEMSTART_IOADDR_IRQ) [Y/n/?] y
+  Enable option "hw" (ether only) (FEATURE_IFCONFIG_HW) [Y/n/?] y
+  Set the broadcast automatically (FEATURE_IFCONFIG_BROADCAST_PLUS) [Y/n/?] y
+ifenslave (IFENSLAVE) [Y/n/?] y
+ifplugd (IFPLUGD) [Y/n/?] y
+ifupdown (IFUPDOWN) [Y/n/?] y
+  Absolute path to ifstate file (IFUPDOWN_IFSTATE_PATH) [/var/run/ifstate] /var/run/ifstate
+  Use ip applet (FEATURE_IFUPDOWN_IP) [Y/n/?] y
+    Use busybox ip applet (FEATURE_IFUPDOWN_IP_BUILTIN) [Y/n/?] y
+  Support for IPv4 (FEATURE_IFUPDOWN_IPV4) [Y/n/?] y
+  Enable mapping support (FEATURE_IFUPDOWN_MAPPING) [Y/n/?] y
+  Support for external dhcp clients (FEATURE_IFUPDOWN_EXTERNAL_DHCP) [N/y/?] n
+inetd (INETD) [Y/n/?] y
+  Support echo service (FEATURE_INETD_SUPPORT_BUILTIN_ECHO) [Y/n/?] y
+  Support discard service (FEATURE_INETD_SUPPORT_BUILTIN_DISCARD) [Y/n/?] y
+  Support time service (FEATURE_INETD_SUPPORT_BUILTIN_TIME) [Y/n/?] y
+  Support daytime service (FEATURE_INETD_SUPPORT_BUILTIN_DAYTIME) [Y/n/?] y
+  Support chargen service (FEATURE_INETD_SUPPORT_BUILTIN_CHARGEN) [Y/n/?] y
+  Support RPC services (FEATURE_INETD_RPC) [Y/n/?] y
+ip (IP) [Y/?] y
+  ip address (FEATURE_IP_ADDRESS) [Y/?] y
+  ip link (FEATURE_IP_LINK) [Y/?] y
+  ip route (FEATURE_IP_ROUTE) [Y/?] y
+  ip tunnel (FEATURE_IP_TUNNEL) [Y/n/?] y
+  ip rule (FEATURE_IP_RULE) [Y/n/?] y
+  Support short forms of ip commands (FEATURE_IP_SHORT_FORMS) [Y/n/?] y
+  Support displaying rarely used link types (FEATURE_IP_RARE_PROTOCOLS) [N/y/?] n
+ipcalc (IPCALC) [Y/n/?] y
+  Fancy IPCALC, more options, adds 1 kbyte (FEATURE_IPCALC_FANCY) [Y/n/?] y
+  Enable long options (FEATURE_IPCALC_LONG_OPTIONS) [Y/n/?] y
+netstat (NETSTAT) [Y/n/?] y
+  Enable wide netstat output (FEATURE_NETSTAT_WIDE) [Y/n/?] y
+  Enable PID/Program name output (FEATURE_NETSTAT_PRG) [Y/n/?] y
+nslookup (NSLOOKUP) [Y/n/?] y
+ntpd (NTPD) [Y/n/?] y
+  Make ntpd usable as a NTP server (FEATURE_NTPD_SERVER) [Y/n/?] y
+pscan (PSCAN) [Y/n/?] y
+route (ROUTE) [Y/n/?] y
+slattach (SLATTACH) [Y/n/?] y
+tcpsvd (TCPSVD) [Y/n/?] y
+telnet (TELNET) [N/y/?] n
+telnetd (TELNETD) [N/y/?] n
+tftp (TFTP) [Y/n/?] y
+tftpd (TFTPD) [Y/n/?] y
+  *
+  * Common options for tftp/tftpd
+  *
+  Enable 'tftp get' and/or tftpd upload code (FEATURE_TFTP_GET) [Y/n/?] y
+  Enable 'tftp put' and/or tftpd download code (FEATURE_TFTP_PUT) [Y/n/?] y
+  Enable 'blksize' and 'tsize' protocol options (FEATURE_TFTP_BLOCKSIZE) [Y/n/?] y
+    Enable tftp progress meter (FEATURE_TFTP_PROGRESS_BAR) [Y/n/?] y
+  Enable debug (TFTP_DEBUG) [N/y/?] n
+traceroute (TRACEROUTE) [Y/n/?] y
+  Enable verbose output (FEATURE_TRACEROUTE_VERBOSE) [Y/n/?] y
+  Enable loose source route (FEATURE_TRACEROUTE_SOURCE_ROUTE) [N/y/?] n
+  Use ICMP instead of UDP (FEATURE_TRACEROUTE_USE_ICMP) [N/y/?] n
+tunctl (TUNCTL) [Y/n/?] y
+  Support owner:group assignment (FEATURE_TUNCTL_UG) [Y/n/?] y
+udhcp client for DHCPv6 (udhcpc6) (UDHCPC6) [N/y/?] n
+udhcp server (udhcpd) (UDHCPD) [Y/n/?] y
+  dhcprelay (DHCPRELAY) [Y/n/?] y
+  Lease display utility (dumpleases) (DUMPLEASES) [Y/n/?] y
+  Rewrite the lease file at every new acknowledge (FEATURE_UDHCPD_WRITE_LEASES_EARLY) [Y/n/?] y
+  Select IP address based on client MAC (FEATURE_UDHCPD_BASE_IP_ON_MAC) [N/y/?] n
+  Absolute path to lease file (DHCPD_LEASES_FILE) [/var/lib/misc/udhcpd.leases] /var/lib/misc/udhcpd.leases
+udhcp client (udhcpc) (UDHCPC) [Y/n/?] y
+  Verify that the offered address is free, using ARP ping (FEATURE_UDHCPC_ARPING) [Y/n/?] y
+  Enable '-P port' option for udhcpd and udhcpc (FEATURE_UDHCP_PORT) [N/y/?] n
+  Maximum verbosity level for udhcp applets (0..9) (UDHCP_DEBUG) [9] 9
+  Support for RFC3397 domain search (experimental) (FEATURE_UDHCP_RFC3397) [Y/n/?] y
+  Support for 802.1Q VLAN parameters (FEATURE_UDHCP_8021Q) [Y/n/?] y
+  Absolute path to config script (UDHCPC_DEFAULT_SCRIPT) [/usr/share/udhcpc/default.script] /usr/share/udhcpc/default.script
+  DHCP options slack buffer size (UDHCPC_SLACK_FOR_BUGGY_SERVERS) [80] 80
+  ifup udhcpc command line options (IFUPDOWN_UDHCPC_CMD_OPTIONS) [-R -n] -R -n
+udpsvd (UDPSVD) [Y/n/?] y
+vconfig (VCONFIG) [Y/n/?] y
+wget (WGET) [N/y/?] n
+zcip (ZCIP) [N/y/?] n
+*
+* Print Utilities
+*
+lpd (LPD) [N/y/?] n
+lpr (LPR) [N/y/?] n
+lpq (LPQ) [N/y/?] n
+*
+* Mail Utilities
+*
+makemime (MAKEMIME) [N/y/?] n
+popmaildir (POPMAILDIR) [N/y/?] n
+reformime (REFORMIME) [N/y/?] n
+sendmail (SENDMAIL) [N/y/?] n
+*
+* Process Utilities
+*
+iostat (IOSTAT) [Y/n/?] y
+lsof (LSOF) [Y/n/?] y
+mpstat (MPSTAT) [N/y/?] n
+nmeter (NMETER) [N/y/?] n
+pmap (PMAP) [Y/n/?] y
+powertop (POWERTOP) [Y/n/?] y
+pstree (PSTREE) [Y/n/?] y
+pwdx (PWDX) [Y/n/?] y
+smemcap (SMEMCAP) [Y/n/?] y
+uptime (UPTIME) [Y/n/?] y
+free (FREE) [Y/n/?] y
+fuser (FUSER) [Y/n/?] y
+kill (KILL) [Y/n/?] y
+  killall (KILLALL) [Y/n/?] y
+  killall5 (KILLALL5) [Y/n] y
+pgrep (PGREP) [Y/n/?] y
+pidof (PIDOF) [Y/n/?] y
+  Enable argument for single shot (-s) (FEATURE_PIDOF_SINGLE) [Y/n/?] y
+  Enable argument for omitting pids (-o) (FEATURE_PIDOF_OMIT) [Y/n/?] y
+pkill (PKILL) [Y/n/?] y
+ps (PS) [Y/n/?] y
+  Enable time and elapsed time output (FEATURE_PS_TIME) [Y/n/?] y
+  Enable additional ps columns (FEATURE_PS_ADDITIONAL_COLUMNS) [Y/n/?] y
+Support Linux prior to 2.4.0 and non-ELF systems (FEATURE_PS_UNUSUAL_SYSTEMS) [N/y/?] n
+renice (RENICE) [Y/n/?] y
+sysctl (BB_SYSCTL) [Y/n/?] y
+top (TOP) [Y/n/?] y
+  Show CPU per-process usage percentage (FEATURE_TOP_CPU_USAGE_PERCENTAGE) [Y/n/?] y
+    Show CPU global usage percentage (FEATURE_TOP_CPU_GLOBAL_PERCENTS) [Y/n/?] y
+      SMP CPU usage display ('c' key) (FEATURE_TOP_SMP_CPU) [N/y/?] n
+    Show 1/10th of a percent in CPU/mem statistics (FEATURE_TOP_DECIMALS) [Y/n/?] y
+  Show CPU process runs on ('j' field) (FEATURE_TOP_SMP_PROCESS) [Y/n/?] y
+  Topmem command ('s' key) (FEATURE_TOPMEM) [Y/n/?] y
+  Support for showing threads in ps/pstree/top (FEATURE_SHOW_THREADS) [Y/n/?] y
+watch (WATCH) [Y/n/?] y
+*
+* Runit Utilities
+*
+runsv (RUNSV) [N/y/?] n
+runsvdir (RUNSVDIR) [N/y/?] n
+sv (SV) [N/y/?] n
+svlogd (SVLOGD) [N/y/?] n
+chpst (CHPST) [N/y/?] n
+setuidgid (SETUIDGID) [N/y/?] n
+envuidgid (ENVUIDGID) [N/y/?] n
+envdir (ENVDIR) [N/y/?] n
+softlimit (SOFTLIMIT) [N/y/?] n
+*
+* Shells
+*
+ash (ASH) [Y/n/?] y
+  bash-compatible extensions (ASH_BASH_COMPAT) [Y/n/?] y
+  Idle timeout variable (ASH_IDLE_TIMEOUT) [N/y/?] n
+  Job control (ASH_JOB_CONTROL) [Y/n/?] y
+  Alias support (ASH_ALIAS) [Y/n/?] y
+  Builtin getopt to parse positional parameters (ASH_GETOPTS) [Y/n/?] y
+  Builtin version of 'echo' (ASH_BUILTIN_ECHO) [Y/n/?] y
+  Builtin version of 'printf' (ASH_BUILTIN_PRINTF) [Y/n/?] y
+  Builtin version of 'test' (ASH_BUILTIN_TEST) [Y/n/?] y
+  'command' command to override shell builtins (ASH_CMDCMD) [Y/n/?] y
+  Check for new mail on interactive shells (ASH_MAIL) [N/y/?] n
+  Optimize for size instead of speed (ASH_OPTIMIZE_FOR_SIZE) [Y/n/?] y
+  Pseudorandom generator and $RANDOM variable (ASH_RANDOM_SUPPORT) [Y/n/?] y
+  Expand prompt string (ASH_EXPAND_PRMT) [Y/n/?] y
+cttyhack (CTTYHACK) [Y/n/?] y
+hush (HUSH) [N/y/?] n
+msh (deprecated: aliased to hush) (MSH) [N/y/?] n
+Choose which shell is aliased to 'sh' name
+> 1. ash (FEATURE_SH_IS_ASH)
+  2. none (FEATURE_SH_IS_NONE)
+choice[1-2?]: 1
+Choose which shell is aliased to 'bash' name
+  1. ash (FEATURE_BASH_IS_ASH)
+> 2. none (FEATURE_BASH_IS_NONE)
+choice[1-2?]: 2
+POSIX math support (SH_MATH_SUPPORT) [Y/n/?] y
+  Extend POSIX math support to 64 bit (SH_MATH_SUPPORT_64) [Y/n/?] y
+Hide message on interactive shell startup (FEATURE_SH_EXTRA_QUIET) [Y/n/?] y
+Use $HISTFILESIZE (FEATURE_SH_HISTFILESIZE) [Y/n/?] y
+*
+* System Logging Utilities
+*
+syslogd (SYSLOGD) [Y/n/?] y
+  Rotate message files (FEATURE_ROTATE_LOGFILE) [Y/n/?] y
+  Remote Log support (FEATURE_REMOTE_LOG) [Y/n/?] y
+  Support -D (drop dups) option (FEATURE_SYSLOGD_DUP) [Y/n/?] y
+  Support syslog.conf (FEATURE_SYSLOGD_CFG) [Y/n/?] y
+  Read buffer size in bytes (FEATURE_SYSLOGD_READ_BUFFER_SIZE) [256] 256
+  Circular Buffer support (FEATURE_IPC_SYSLOG) [Y/n/?] y
+    Circular buffer size in Kbytes (minimum 4KB) (FEATURE_IPC_SYSLOG_BUFFER_SIZE) [16] 16
+    logread (LOGREAD) [Y/n/?] y
+      Double buffering (FEATURE_LOGREAD_REDUCED_LOCKING) [Y/n/?] y
+klogd (KLOGD) [Y/n/?] y
+  Use the klogctl() interface (FEATURE_KLOGD_KLOGCTL) [Y/n/?] y
+logger (LOGGER) [Y/n/?] y
+Building busybox...
+  GEN     /home/jamey/Lamobo-D1/output/busybox/Makefile
+  Using /home/jamey/Lamobo-D1/src/busybox as source for busybox
+/home/jamey/Lamobo-D1/src/busybox/applets/usage.c: In function ‘main’:
+/home/jamey/Lamobo-D1/src/busybox/applets/usage.c:52:8: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+   write(STDOUT_FILENO, usage_array[i].usage, strlen(usage_array[i].usage) + 1);
+        ^
+/home/jamey/Lamobo-D1/src/busybox/applets/applet_tables.c: In function ‘main’:
+/home/jamey/Lamobo-D1/src/busybox/applets/applet_tables.c:144:9: warning: ignoring return value of ‘fgets’, declared with attribute warn_unused_result [-Wunused-result]
+    fgets(line_old, sizeof(line_old), fp);
+         ^
+/home/jamey/Lamobo-D1/src/busybox/applets/usage_pod.c: In function ‘main’:
+/home/jamey/Lamobo-D1/src/busybox/applets/usage_pod.c:74:3: warning: format not a string literal and no format arguments [-Wformat-security]
+   printf(usage_array[i].aname);
+   ^
+Trying libraries: crypt m
+ Library crypt is needed, can't exclude it (yet)
+ Library m is needed, can't exclude it (yet)
+Final link with: crypt m
+libbusybox: 0_lib/libbusybox.so.1.20.2
+busybox linked against libbusybox: 0_lib/busybox
+Linking individual applets against libbusybox (see 0_lib/*)
+  Using /home/jamey/Lamobo-D1/src/busybox as source for busybox
+  GEN     /home/jamey/Lamobo-D1/output/busybox/Makefile
+  rootfs//bin/ash -> busybox
+  rootfs//bin/base64 -> busybox
+  rootfs//bin/cat -> busybox
+  rootfs//bin/catv -> busybox
+  rootfs//bin/chmod -> busybox
+  rootfs//bin/chown -> busybox
+  rootfs//bin/cp -> busybox
+  rootfs//bin/cttyhack -> busybox
+  rootfs//bin/date -> busybox
+  rootfs//bin/dd -> busybox
+  rootfs//bin/df -> busybox
+  rootfs//bin/dmesg -> busybox
+  rootfs//bin/dnsdomainname -> busybox
+  rootfs//bin/dumpkmap -> busybox
+  rootfs//bin/echo -> busybox
+  rootfs//bin/egrep -> busybox
+  rootfs//bin/false -> busybox
+  rootfs//bin/fgrep -> busybox
+  rootfs//bin/fsync -> busybox
+  rootfs//bin/getopt -> busybox
+  rootfs//bin/grep -> busybox
+  rootfs//bin/hostname -> busybox
+  rootfs//bin/ionice -> busybox
+  rootfs//bin/iostat -> busybox
+  rootfs//bin/ip -> busybox
+  rootfs//bin/ipaddr -> busybox
+  rootfs//bin/ipcalc -> busybox
+  rootfs//bin/iplink -> busybox
+  rootfs//bin/iproute -> busybox
+  rootfs//bin/iprule -> busybox
+  rootfs//bin/iptunnel -> busybox
+  rootfs//bin/kill -> busybox
+  rootfs//bin/linux32 -> busybox
+  rootfs//bin/linux64 -> busybox
+  rootfs//bin/ln -> busybox
+  rootfs//bin/login -> busybox
+  rootfs//bin/ls -> busybox
+  rootfs//bin/mkdir -> busybox
+  rootfs//bin/mknod -> busybox
+  rootfs//bin/more -> busybox
+  rootfs//bin/mount -> busybox
+  rootfs//bin/mountpoint -> busybox
+  rootfs//bin/mv -> busybox
+  rootfs//bin/netstat -> busybox
+  rootfs//bin/nice -> busybox
+  rootfs//bin/pidof -> busybox
+  rootfs//bin/ping -> busybox
+  rootfs//bin/powertop -> busybox
+  rootfs//bin/printenv -> busybox
+  rootfs//bin/ps -> busybox
+  rootfs//bin/pwd -> busybox
+  rootfs//bin/rm -> busybox
+  rootfs//bin/rmdir -> busybox
+  rootfs//bin/scriptreplay -> busybox
+  rootfs//bin/sed -> busybox
+  rootfs//bin/setarch -> busybox
+  rootfs//bin/setserial -> busybox
+  rootfs//bin/sh -> busybox
+  rootfs//bin/sleep -> busybox
+  rootfs//bin/stat -> busybox
+  rootfs//bin/stty -> busybox
+  rootfs//bin/sync -> busybox
+  rootfs//bin/touch -> busybox
+  rootfs//bin/true -> busybox
+  rootfs//bin/umount -> busybox
+  rootfs//bin/uname -> busybox
+  rootfs//bin/usleep -> busybox
+  rootfs//bin/vi -> busybox
+  rootfs//bin/watch -> busybox
+  rootfs//linuxrc -> bin/busybox
+  rootfs//sbin/acpid -> ../bin/busybox
+  rootfs//sbin/adjtimex -> ../bin/busybox
+  rootfs//sbin/arp -> ../bin/busybox
+  rootfs//sbin/blockdev -> ../bin/busybox
+  rootfs//sbin/bootchartd -> ../bin/busybox
+  rootfs//sbin/depmod -> ../bin/busybox
+  rootfs//sbin/devmem -> ../bin/busybox
+  rootfs//sbin/fbsplash -> ../bin/busybox
+  rootfs//sbin/getty -> ../bin/busybox
+  rootfs//sbin/halt -> ../bin/busybox
+  rootfs//sbin/hwclock -> ../bin/busybox
+  rootfs//sbin/ifconfig -> ../bin/busybox
+  rootfs//sbin/ifdown -> ../bin/busybox
+  rootfs//sbin/ifenslave -> ../bin/busybox
+  rootfs//sbin/ifup -> ../bin/busybox
+  rootfs//sbin/init -> ../bin/busybox
+  rootfs//sbin/inotifyd -> ../bin/busybox
+  rootfs//sbin/insmod -> ../bin/busybox
+  rootfs//sbin/klogd -> ../bin/busybox
+  rootfs//sbin/loadkmap -> ../bin/busybox
+  rootfs//sbin/logread -> ../bin/busybox
+  rootfs//sbin/losetup -> ../bin/busybox
+  rootfs//sbin/lsmod -> ../bin/busybox
+  rootfs//sbin/makedevs -> ../bin/busybox
+  rootfs//sbin/mdev -> ../bin/busybox
+  rootfs//sbin/mkdosfs -> ../bin/busybox
+  rootfs//sbin/mkfs.vfat -> ../bin/busybox
+  rootfs//sbin/modinfo -> ../bin/busybox
+  rootfs//sbin/modprobe -> ../bin/busybox
+  rootfs//sbin/nameif -> ../bin/busybox
+  rootfs//sbin/pivot_root -> ../bin/busybox
+  rootfs//sbin/poweroff -> ../bin/busybox
+  rootfs//sbin/reboot -> ../bin/busybox
+  rootfs//sbin/rmmod -> ../bin/busybox
+  rootfs//sbin/route -> ../bin/busybox
+  rootfs//sbin/setconsole -> ../bin/busybox
+  rootfs//sbin/slattach -> ../bin/busybox
+  rootfs//sbin/switch_root -> ../bin/busybox
+  rootfs//sbin/sysctl -> ../bin/busybox
+  rootfs//sbin/syslogd -> ../bin/busybox
+  rootfs//sbin/tunctl -> ../bin/busybox
+  rootfs//sbin/udhcpc -> ../bin/busybox
+  rootfs//sbin/vconfig -> ../bin/busybox
+  rootfs//sbin/watchdog -> ../bin/busybox
+  rootfs//usr/bin/[ -> ../../bin/busybox
+  rootfs//usr/bin/[[ -> ../../bin/busybox
+  rootfs//usr/bin/arping -> ../../bin/busybox
+  rootfs//usr/bin/awk -> ../../bin/busybox
+  rootfs//usr/bin/basename -> ../../bin/busybox
+  rootfs//usr/bin/beep -> ../../bin/busybox
+  rootfs//usr/bin/cal -> ../../bin/busybox
+  rootfs//usr/bin/chat -> ../../bin/busybox
+  rootfs//usr/bin/chrt -> ../../bin/busybox
+  rootfs//usr/bin/chvt -> ../../bin/busybox
+  rootfs//usr/bin/cksum -> ../../bin/busybox
+  rootfs//usr/bin/clear -> ../../bin/busybox
+  rootfs//usr/bin/cmp -> ../../bin/busybox
+  rootfs//usr/bin/crontab -> ../../bin/busybox
+  rootfs//usr/bin/cut -> ../../bin/busybox
+  rootfs//usr/bin/dc -> ../../bin/busybox
+  rootfs//usr/bin/diff -> ../../bin/busybox
+  rootfs//usr/bin/dirname -> ../../bin/busybox
+  rootfs//usr/bin/dos2unix -> ../../bin/busybox
+  rootfs//usr/bin/du -> ../../bin/busybox
+  rootfs//usr/bin/dumpleases -> ../../bin/busybox
+  rootfs//usr/bin/eject -> ../../bin/busybox
+  rootfs//usr/bin/env -> ../../bin/busybox
+  rootfs//usr/bin/expand -> ../../bin/busybox
+  rootfs//usr/bin/expr -> ../../bin/busybox
+  rootfs//usr/bin/fgconsole -> ../../bin/busybox
+  rootfs//usr/bin/find -> ../../bin/busybox
+  rootfs//usr/bin/fold -> ../../bin/busybox
+  rootfs//usr/bin/free -> ../../bin/busybox
+  rootfs//usr/bin/ftpget -> ../../bin/busybox
+  rootfs//usr/bin/ftpput -> ../../bin/busybox
+  rootfs//usr/bin/fuser -> ../../bin/busybox
+  rootfs//usr/bin/groups -> ../../bin/busybox
+  rootfs//usr/bin/hd -> ../../bin/busybox
+  rootfs//usr/bin/head -> ../../bin/busybox
+  rootfs//usr/bin/hexdump -> ../../bin/busybox
+  rootfs//usr/bin/hostid -> ../../bin/busybox
+  rootfs//usr/bin/id -> ../../bin/busybox
+  rootfs//usr/bin/ifplugd -> ../../bin/busybox
+  rootfs//usr/bin/install -> ../../bin/busybox
+  rootfs//usr/bin/ipcrm -> ../../bin/busybox
+  rootfs//usr/bin/ipcs -> ../../bin/busybox
+  rootfs//usr/bin/kbd_mode -> ../../bin/busybox
+  rootfs//usr/bin/killall -> ../../bin/busybox
+  rootfs//usr/bin/killall5 -> ../../bin/busybox
+  rootfs//usr/bin/less -> ../../bin/busybox
+  rootfs//usr/bin/logger -> ../../bin/busybox
+  rootfs//usr/bin/logname -> ../../bin/busybox
+  rootfs//usr/bin/lsof -> ../../bin/busybox
+  rootfs//usr/bin/lspci -> ../../bin/busybox
+  rootfs//usr/bin/lsusb -> ../../bin/busybox
+  rootfs//usr/bin/md5sum -> ../../bin/busybox
+  rootfs//usr/bin/mesg -> ../../bin/busybox
+  rootfs//usr/bin/mkfifo -> ../../bin/busybox
+  rootfs//usr/bin/nc -> ../../bin/busybox
+  rootfs//usr/bin/nslookup -> ../../bin/busybox
+  rootfs//usr/bin/od -> ../../bin/busybox
+  rootfs//usr/bin/passwd -> ../../bin/busybox
+  rootfs//usr/bin/pgrep -> ../../bin/busybox
+  rootfs//usr/bin/pkill -> ../../bin/busybox
+  rootfs//usr/bin/pmap -> ../../bin/busybox
+  rootfs//usr/bin/printf -> ../../bin/busybox
+  rootfs//usr/bin/pscan -> ../../bin/busybox
+  rootfs//usr/bin/pstree -> ../../bin/busybox
+  rootfs//usr/bin/pwdx -> ../../bin/busybox
+  rootfs//usr/bin/readahead -> ../../bin/busybox
+  rootfs//usr/bin/readlink -> ../../bin/busybox
+  rootfs//usr/bin/realpath -> ../../bin/busybox
+  rootfs//usr/bin/renice -> ../../bin/busybox
+  rootfs//usr/bin/reset -> ../../bin/busybox
+  rootfs//usr/bin/resize -> ../../bin/busybox
+  rootfs//usr/bin/rtcwake -> ../../bin/busybox
+  rootfs//usr/bin/rx -> ../../bin/busybox
+  rootfs//usr/bin/script -> ../../bin/busybox
+  rootfs//usr/bin/setkeycodes -> ../../bin/busybox
+  rootfs//usr/bin/setsid -> ../../bin/busybox
+  rootfs//usr/bin/sha1sum -> ../../bin/busybox
+  rootfs//usr/bin/sha256sum -> ../../bin/busybox
+  rootfs//usr/bin/sha512sum -> ../../bin/busybox
+  rootfs//usr/bin/showkey -> ../../bin/busybox
+  rootfs//usr/bin/smemcap -> ../../bin/busybox
+  rootfs//usr/bin/sort -> ../../bin/busybox
+  rootfs//usr/bin/split -> ../../bin/busybox
+  rootfs//usr/bin/strings -> ../../bin/busybox
+  rootfs//usr/bin/sum -> ../../bin/busybox
+  rootfs//usr/bin/tail -> ../../bin/busybox
+  rootfs//usr/bin/tcpsvd -> ../../bin/busybox
+  rootfs//usr/bin/tee -> ../../bin/busybox
+  rootfs//usr/bin/test -> ../../bin/busybox
+  rootfs//usr/bin/tftp -> ../../bin/busybox
+  rootfs//usr/bin/tftpd -> ../../bin/busybox
+  rootfs//usr/bin/time -> ../../bin/busybox
+  rootfs//usr/bin/timeout -> ../../bin/busybox
+  rootfs//usr/bin/top -> ../../bin/busybox
+  rootfs//usr/bin/traceroute -> ../../bin/busybox
+  rootfs//usr/bin/tty -> ../../bin/busybox
+  rootfs//usr/bin/udpsvd -> ../../bin/busybox
+  rootfs//usr/bin/unix2dos -> ../../bin/busybox
+  rootfs//usr/bin/uptime -> ../../bin/busybox
+  rootfs//usr/bin/uudecode -> ../../bin/busybox
+  rootfs//usr/bin/uuencode -> ../../bin/busybox
+  rootfs//usr/bin/volname -> ../../bin/busybox
+  rootfs//usr/bin/wc -> ../../bin/busybox
+  rootfs//usr/bin/which -> ../../bin/busybox
+  rootfs//usr/bin/whoami -> ../../bin/busybox
+  rootfs//usr/bin/whois -> ../../bin/busybox
+  rootfs//usr/bin/xargs -> ../../bin/busybox
+  rootfs//usr/bin/yes -> ../../bin/busybox
+  rootfs//usr/sbin/brctl -> ../../bin/busybox
+  rootfs//usr/sbin/chroot -> ../../bin/busybox
+  rootfs//usr/sbin/dhcprelay -> ../../bin/busybox
+  rootfs//usr/sbin/fakeidentd -> ../../bin/busybox
+  rootfs//usr/sbin/fbset -> ../../bin/busybox
+  rootfs//usr/sbin/ftpd -> ../../bin/busybox
+  rootfs//usr/sbin/inetd -> ../../bin/busybox
+  rootfs//usr/sbin/loadfont -> ../../bin/busybox
+  rootfs//usr/sbin/nanddump -> ../../bin/busybox
+  rootfs//usr/sbin/nandwrite -> ../../bin/busybox
+  rootfs//usr/sbin/nbd-client -> ../../bin/busybox
+  rootfs//usr/sbin/ntpd -> ../../bin/busybox
+  rootfs//usr/sbin/rdate -> ../../bin/busybox
+  rootfs//usr/sbin/rdev -> ../../bin/busybox
+  rootfs//usr/sbin/readprofile -> ../../bin/busybox
+  rootfs//usr/sbin/setfont -> ../../bin/busybox
+  rootfs//usr/sbin/setlogcons -> ../../bin/busybox
+  rootfs//usr/sbin/ubiattach -> ../../bin/busybox
+  rootfs//usr/sbin/ubidetach -> ../../bin/busybox
+  rootfs//usr/sbin/ubimkvol -> ../../bin/busybox
+  rootfs//usr/sbin/ubirmvol -> ../../bin/busybox
+  rootfs//usr/sbin/ubirsvol -> ../../bin/busybox
+  rootfs//usr/sbin/ubiupdatevol -> ../../bin/busybox
+  rootfs//usr/sbin/udhcpd -> ../../bin/busybox
+Merging with the prebuilt...
+Building rootfs...
+Extracting rootfs...Done.
+Changing Owner to current user...Done.
+build initramfs, please remove gloss if you need.
+building root.jffs2 file system ...
+building root.sqsh4 file system ...
+Creating SquashFS image...
+Parallel mksquashfs: Using 1 processor
+Creating 4.0 filesystem on root.sqsh4, block size 131072.
+
+Exportable Squashfs 4.0 filesystem, xz compressed, data block size 131072
+	compressed data, compressed metadata, compressed fragments, compressed xattrs
+	duplicates are removed
+Filesystem size 4644.98 Kbytes (4.54 Mbytes)
+	33.66% of uncompressed filesystem size (13799.37 Kbytes)
+Inode table size 2624 bytes (2.56 Kbytes)
+	17.26% of uncompressed inode table size (15205 bytes)
+Directory table size 3550 bytes (3.47 Kbytes)
+	52.76% of uncompressed directory table size (6728 bytes)
+Number of duplicate files found 1
+Number of inodes 405
+Number of files 81
+Number of fragments 21
+Number of symbolic links  288
+Number of device nodes 2
+Number of fifo nodes 0
+Number of socket nodes 0
+Number of directories 34
+Number of ids (unique uids + gids) 2
+Number of uids 2
+	root (0)
+	jamey (1000)
+Number of gids 2
+	root (0)
+	jamey (1000)
+Building samples...
+arm-none-linux-gnueabi-strip: 'record_audio': No such file
+arm-none-linux-gnueabi-strip: 'record_video': No such file
+Building node...
+{ 'target_defaults': { 'cflags': [],
+                       'default_configuration': 'Release',
+                       'defines': [],
+                       'include_dirs': [],
+                       'libraries': []},
+  'variables': { 'arm_fpu': 'vfpv2',
+                 'arm_neon': 0,
+                 'armv7': 0,
+                 'clang': 0,
+                 'gcc_version': 44,
+                 'host_arch': 'arm',
+                 'node_install_npm': 'true',
+                 'node_prefix': '',
+                 'node_shared_cares': 'false',
+                 'node_shared_http_parser': 'false',
+                 'node_shared_libuv': 'false',
+                 'node_shared_openssl': 'false',
+                 'node_shared_v8': 'false',
+                 'node_shared_zlib': 'false',
+                 'node_tag': '',
+                 'node_unsafe_optimizations': 0,
+                 'node_use_dtrace': 'false',
+                 'node_use_etw': 'false',
+                 'node_use_openssl': 'true',
+                 'node_use_perfctr': 'false',
+                 'node_use_systemtap': 'false',
+                 'openssl_no_asm': 0,
+                 'python': '/usr/bin/python',
+                 'target_arch': 'arm',
+                 'v8_enable_gdbjit': 0,
+                 'v8_no_strict_aliasing': 1,
+                 'v8_use_arm_eabi_hardfloat': 'false',
+                 'v8_use_snapshot': 'false',
+                 'want_separate_host_toolset': 0}}
+creating  ./config.gypi
+creating  ./config.mk
+  ACTION _home_jamey_Lamobo_D1_src_node_node_gyp_node_js2c_host_node_js2c /home/jamey/Lamobo-D1/src/node/out/Release/obj/gen/node_natives.h
+  CXX(target) /home/jamey/Lamobo-D1/src/node/out/Release/obj.target/node/src/node_javascript.o
+  LINK(target) /home/jamey/Lamobo-D1/src/node/out/Release/node
+Building updater...
+Packing Firmware...
+Packing TFCard...

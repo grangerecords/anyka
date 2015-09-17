@@ -2,6 +2,9 @@
 
 build_tools()
 {
+	echo DEV_ROOT = $DEV_ROOT
+	export PATH=/home/jamey/arm-2009q3/bin:$PATH
+	echo $PATH
     echo Updating package list...
     $APT_GET update
 

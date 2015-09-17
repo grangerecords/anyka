@@ -1,0 +1,1 @@
+command |& tee ~/outputfile.txt
